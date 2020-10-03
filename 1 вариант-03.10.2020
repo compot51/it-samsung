@@ -1,0 +1,51 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class hehe
+{
+    public static void main(String[] args)
+    {
+        //----------------------------БАЗОВЫЙ---------------------------------
+        Scanner in = new Scanner(System.in);
+        try{
+            boolean a = in.nextBoolean ();
+            boolean b = in.nextBoolean ();
+            boolean c = in.nextBoolean ();
+            boolean r1 = (a || !a && b) || c;
+            boolean r2 = !a || a && (b || c);
+            boolean r3 = (a || b && !c) && c;
+        }
+        catch (Exception e) {
+            System.out.println (e.getMessage());
+        }
+        //------------------------------СРЕДНИЙ-------------------------------------
+        try {
+            int a = in.nextInt ();
+            int b = in.nextInt ();
+            int c = in.nextInt ();
+            if (a % 2 == 0 ^ b % 2 == 0)
+                System.out.println ("YES");
+            else
+                System.out.println ("NO");
+            if (a % 3 == 0 && b % 3 == 0 && c % 3 == 0)
+                System.out.println ("YES");
+            else
+                System.out.println ("NO");
+        }
+        catch (Exception e) {
+            System.out.println (e.getMessage());
+        }
+        //--------------------------------ВЫСОКИЙ---------------------------------------
+        try {
+            int x = in.nextInt ();
+            int y = in.nextInt ();
+            if (y <= 1 && y >= -1 && x <= 1 && x >= -1 && (x + y >= 1 || x - y >= 1 || - x + y >= 1 || - x - y >= 1))
+                System.out.println ("YES");
+            else
+                System.out.println ("NO");
+        }
+        catch (Exception e) {
+            System.out.println (e.getMessage());
+        }
+    }
+}
